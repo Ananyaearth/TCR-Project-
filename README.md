@@ -2,54 +2,64 @@
 
 ## Overview
 
-This project aims to develop a machine learning model to predict calorie expenditure based on various factors such as physical activity, age, gender, weight, and heart rate using XGBoost (eXtreme Gradient Boosting) algorithm. Calorie expenditure prediction is essential for fitness monitoring, weight management, and personalized fitness recommendations.
+This project aims to model calorie expenditure using XGBoost, a powerful machine learning algorithm known for its efficiency and accuracy in regression tasks. The dataset used for this project is stored in a CSV file named `calories.csv`, containing user IDs and corresponding calorie counts. The XGBoost model is implemented in a Jupyter Notebook named `XGBoost_model.ipynb`.
 
-## Features
+## Dataset
 
-- Utilizes XGBoost algorithm for accurate calorie expenditure prediction.
-- Integrates various input features including physical activity levels, age, gender, weight, and heart rate.
-- Provides insights into factors influencing calorie expenditure and helps in optimizing fitness routines.
-- Allows for real-time calorie expenditure estimation for individuals during physical activities.
+The dataset `calories.csv` consists of the following columns:
 
-## Installation
+- `user_id`: Unique identifier for each user.
+- `calorie_count`: Calorie expenditure for each user.
+
+The dataset is used to train the XGBoost model to predict calorie expenditure based on user characteristics and other factors.
+
+## Files
+
+1. `XGBoost_model.ipynb`: Jupyter Notebook containing the implementation of the XGBoost model. The notebook includes the following sections:
+   - Data loading and preprocessing.
+   - Feature engineering.
+   - Model training using XGBoost.
+   - Model evaluation and validation.
+   - Prediction of calorie expenditure.
+
+2. `calories.csv`: CSV file containing the dataset with user IDs and calorie counts.
+
+## Installation and Setup
+
+To run the Jupyter Notebook and train the XGBoost model, follow these steps:
 
 1. Clone the repository:
 
     ```
-    git clone https://github.com/Ananyaearth/TCR-Project-.git
+    git clone https://github.com/your-username/calorie-expenditure-model.git
     ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
 
     ```
-    pip install -r requirements.txt
+    cd calorie-expenditure-model
     ```
 
-## Dataset
+3. Install the required dependencies:
 
-The dataset used for training the calorie expenditure model should contain features such as physical activity levels, age, gender, weight, heart rate, and corresponding calorie expenditure measurements. Ensure the dataset is properly preprocessed and formatted before training the model.
+    ```
+    pip install numpy pandas matplotlib xgboost jupyterlab
+    ```
+
+4. Launch Jupyter Notebook:
+
+    ```
+    jupyter notebook
+    ```
+
+5. Open the `XGBoost_model.ipynb` notebook in your browser and execute each cell to train the model and make predictions.
 
 ## Usage
 
-1. Prepare the dataset: Ensure the dataset is formatted correctly with appropriate features and labels (calorie expenditure).
-   
-2. Train the model: Use the provided dataset to train the XGBoost model by running the training script.
-
-    ```
-    python train_model.py
-    ```
-
-3. Evaluate model performance: Evaluate the trained model's performance using relevant metrics and validation data.
-
-4. Predict calorie expenditure: Utilize the trained model to predict calorie expenditure for new data points or real-time inputs.
-
-    ```
-    python predict_calorie_expenditure.py
-    ```
-
-## Model Tuning
-
-Experiment with hyperparameters tuning and feature selection to optimize model performance. Adjust XGBoost parameters such as learning rate, maximum depth, number of estimators, and regularization parameters for better results.
+1. Load the dataset `calories.csv` into the notebook.
+2. Follow the steps outlined in the notebook to preprocess the data, train the XGBoost model, and make predictions.
+3. Evaluate the model's performance using appropriate metrics and visualizations.
+4. Use the trained model to predict calorie expenditure for new users or scenarios.
 
 ## License
 
