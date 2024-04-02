@@ -8,8 +8,8 @@ This project aims to model calorie expenditure using XGBoost, a powerful machine
 
 The dataset `calories.csv` consists of the following columns:
 
-- `user_id`: Unique identifier for each user.
-- `calorie_count`: Calorie expenditure for each user.
+- `User_ID`: Unique identifier for each user.
+- `Calories`: Calorie expenditure for each user.
 
 The dataset is used to train the XGBoost model to predict calorie expenditure based on user characteristics and other factors.
 
@@ -22,7 +22,7 @@ The dataset is used to train the XGBoost model to predict calorie expenditure ba
    - Model evaluation and validation.
    - Prediction of calorie expenditure.
 
-2. `calories.csv`: CSV file containing the dataset with user IDs and calorie counts.
+2. `Calories.csv`: CSV file containing the dataset with user IDs and calorie counts.
 
 ## Installation and Setup
 
@@ -31,13 +31,13 @@ To run the Jupyter Notebook and train the XGBoost model, follow these steps:
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/calorie-expenditure-model.git
+    git clone https://github.com/Ananyaearth/TCR-Project-.git
     ```
 
 2. Navigate to the project directory:
 
     ```
-    cd calorie-expenditure-model
+    cd TCR-Project-
     ```
 
 3. Install the required dependencies:
@@ -56,7 +56,7 @@ To run the Jupyter Notebook and train the XGBoost model, follow these steps:
 
 ## Usage
 
-1. Load the dataset `calories.csv` into the notebook.
+1. Load the dataset `Calories.csv` into the notebook.
 2. Follow the steps outlined in the notebook to preprocess the data, train the XGBoost model, and make predictions.
 3. Evaluate the model's performance using appropriate metrics and visualizations.
 4. Use the trained model to predict calorie expenditure for new users or scenarios.
