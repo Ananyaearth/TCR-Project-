@@ -2,31 +2,17 @@
 
 ## Overview
 
-This project aims to model calorie expenditure using XGBoost, a powerful machine learning algorithm known for its efficiency and accuracy in regression tasks. The dataset used for this project is stored in a CSV file named `calories.csv`, containing user IDs and corresponding calorie counts. The XGBoost model is implemented in a Jupyter Notebook named `XGBoost_model.ipynb`.
-
-## Dataset
-
-The dataset `calories.csv` consists of the following columns:
-
-- `User_ID`: Unique identifier for each user.
-- `Calories`: Calorie expenditure for each user.
-
-The dataset is used to train the XGBoost model to predict calorie expenditure based on user characteristics and other factors.
+This project aims to model calorie expenditure using the XGBoost algorithm. The goal is to predict the number of calories burned during exercise based on various features such as user characteristics and exercise parameters. The dataset consists of two CSV files: `calories.csv`, containing user IDs and corresponding calorie counts, and `exercise.csv`, containing user information and exercise details.
 
 ## Files
 
-1. `XGBoost_model.ipynb`: Jupyter Notebook containing the implementation of the XGBoost model. The notebook includes the following sections:
-   - Data loading and preprocessing.
-   - Feature engineering.
-   - Model training using XGBoost.
-   - Model evaluation and validation.
-   - Prediction of calorie expenditure.
+1. **Xgboost_model.ipynb**: Jupyter Notebook containing the code for building and training the XGBoost model. This notebook includes data preprocessing, model training, evaluation, and prediction.
 
-2. `Calories.csv`: CSV file containing the dataset with user IDs and calorie counts.
+2. **calories.csv**: CSV file containing user IDs (`User_id`) and the corresponding calorie counts. Each row represents a record of calorie expenditure for a specific user.
 
-## Installation and Setup
+3. **exercise.csv**: CSV file containing user information and exercise details. It includes columns such as `User_ID`, `Gender`, `Age`, `Height`, `Weight`, `Duration`, `Heart_Rate`, and `Body_Temp`. These features are used to predict calorie expenditure.
 
-To run the Jupyter Notebook and train the XGBoost model, follow these steps:
+## Installation
 
 1. Clone the repository:
 
@@ -34,32 +20,28 @@ To run the Jupyter Notebook and train the XGBoost model, follow these steps:
     git clone https://github.com/Ananyaearth/TCR-Project-.git
     ```
 
-2. Navigate to the project directory:
+2. Install dependencies:
 
     ```
-    cd TCR-Project-
+    pip install -r requirements.txt
     ```
-
-3. Install the required dependencies:
-
-    ```
-    pip install numpy pandas matplotlib xgboost jupyterlab
-    ```
-
-4. Launch Jupyter Notebook:
-
-    ```
-    jupyter notebook
-    ```
-
-5. Open the `XGBoost_model.ipynb` notebook in your browser and execute each cell to train the model and make predictions.
 
 ## Usage
 
-1. Load the dataset `Calories.csv` into the notebook.
-2. Follow the steps outlined in the notebook to preprocess the data, train the XGBoost model, and make predictions.
-3. Evaluate the model's performance using appropriate metrics and visualizations.
-4. Use the trained model to predict calorie expenditure for new users or scenarios.
+1. Open the `Xgboost_model.ipynb` notebook using Jupyter or any compatible environment.
+
+2. Run the cells in the notebook sequentially to preprocess the data, train the XGBoost model, evaluate its performance, and make predictions.
+
+3. Ensure that both `calories.csv` and `exercise.csv` are in the same directory as the notebook, or provide the correct file paths within the notebook.
+
+## Dataset
+
+- **calories.csv**: Contains records of calorie counts for different users.
+- **exercise.csv**: Contains user information and exercise details used for modeling calorie expenditure.
+
+## Model Evaluation
+
+The performance of the XGBoost model is evaluated using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared (R2) score. These metrics provide insights into how well the model predicts calorie expenditure based on the given features.
 
 ## License
 
