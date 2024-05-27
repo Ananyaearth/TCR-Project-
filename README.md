@@ -12,6 +12,48 @@ This project aims to model calorie expenditure using the XGBoost algorithm. The 
 
 3. **exercise.csv**: CSV file containing user information and exercise details. It includes columns such as `User_ID`, `Gender`, `Age`, `Height`, `Weight`, `Duration`, `Heart_Rate`, and `Body_Temp`. These features are used to predict calorie expenditure.
 
+## Steps Involved
+
+1. **Import Libraries:**
+   - Necessary libraries like pandas, numpy, matplotlib, seaborn, and scikit-learn are imported.
+
+2. **Load Datasets:**
+   - The datasets are loaded from CSV files into pandas DataFrames.
+
+3. **Merge Datasets:**
+   - The datasets are merged on the `User_ID` column to create a consolidated dataset.
+
+4. **Data Cleaning:**
+   - Check for missing values and ensure there are no null entries.
+   - Describe the dataset to get basic statistical insights.
+
+5. **Data Visualization:**
+   - Use seaborn to create count plots and distribution plots to visualize the data.
+   - Create a heatmap to show the correlation between different features.
+
+6. **Data Preprocessing:**
+   - Convert categorical variables into numerical values (e.g., gender is converted to 0 for male and 1 for female).
+   - Split the data into features (`x`) and target variable (`y`).
+
+7. **Train-Test Split:**
+   - Split the data into training and testing sets using `train_test_split` from scikit-learn.
+
+8. **Model Training:**
+   - Use `XGBRegressor` from the XGBoost library to train the model on the training data.
+
+9. **Model Prediction and Evaluation:**
+   - Make predictions on the test set.
+   - Evaluate the model using Mean Absolute Error (MAE).
+
+## Dependencies
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- xgboost
+
 ## Installation
 
 1. Clone the repository:
@@ -26,25 +68,19 @@ This project aims to model calorie expenditure using the XGBoost algorithm. The 
     pip install -r requirements.txt
     ```
 
-## Usage
+## Usage Instructions
 
-1. Open the `Xgboost_model.ipynb` notebook using Jupyter or any compatible environment.
+1. Ensure you have the required libraries installed. You can install them using pip:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+   ```
+2. Place the datasets (`calories.csv` and `exercise.csv`) in the specified directory or update the file paths accordingly.
+3. Run the provided code in a Python environment (e.g., Jupyter Notebook, Spyder, or any other IDE).
+4. The code will load the data, perform analysis, visualize the data, train an XGBoost regression model, and evaluate it using Mean Absolute Error.
 
-2. Run the cells in the notebook sequentially to preprocess the data, train the XGBoost model, evaluate its performance, and make predictions.
+## Note
 
-3. Ensure that both `calories.csv` and `exercise.csv` are in the same directory as the notebook, or provide the correct file paths within the notebook.
-
-## Dataset
-
-- **calories.csv**: Contains records of calorie counts for different users.
-- **exercise.csv**: Contains user information and exercise details used for modeling calorie expenditure.
-
-## Model Evaluation
-
-The performance of the XGBoost model is evaluated using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared (R2) score. These metrics provide insights into how well the model predicts calorie expenditure based on the given features.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- Ensure the file paths to the datasets are correct.
+- The seaborn `distplot` function used in the code is deprecated; use `histplot` or `displot` instead for future compatibility.
 
 ---
